@@ -2,8 +2,8 @@
 
 Install and update ProcessWire with Composer while keeping the familiar `wire/` and `site/` webroot layout. It fits either of these setups:
 
-- **Project root as webroot:** `composer.json`, `wire/`, `index.php` and `site/` live at the project root.
-- **Separate webroot:** `composer.json` lives at the project root, while ProcessWire runs from an existing directory such as `public/`.
+- **Project root as webroot:** `composer.json`, `wire/`, `site/` and `index.php` live at the project root.
+- **Separate webroot:** `composer.json` at project root, the site is served from a directory like `public/`.
 
 In both setups, Composer installs the official `processwire/processwire` package in `vendor/`. This plugin copies its `wire/` directory and `index.php` into your webroot. Composer's lock file determines which core version those copies contain.
 
@@ -34,7 +34,7 @@ Without that setting, the plugin uses the directory containing `composer.json`. 
 
 If you are adding the plugin to an existing site, back up or review `wire/` and `index.php` first. The first sync replaces them with files from the installed package.
 
-## Day-to-day commands
+## Commands
 
 | Task | Command |
 | --- | --- |
@@ -49,9 +49,13 @@ You can commit `wire/` and `index.php` for deployments that do not run Composer,
 
 The plugin does not touch `.htaccess`. If a core update changes upstream `htaccess.txt`, it prints a command you can use to compare the new rules with yours.
 
-## Run the tests
+## Tests
 
 ```sh
 composer install
 composer test
 ```
+
+## License
+
+MIT
