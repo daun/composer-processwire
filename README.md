@@ -1,8 +1,6 @@
 # Composer ProcessWire
 
-Install and update ProcessWire with Composer while keeping the familiar `wire/`, `index.php`, and `site/` webroot layout.
-
-It fits either of these setups:
+Install and update ProcessWire with Composer while keeping the familiar `wire/` and `site/` webroot layout. It fits either of these setups:
 
 - **Project root as webroot:** `composer.json`, `wire/`, `index.php` and `site/` live at the project root.
 - **Separate webroot:** `composer.json` lives at the project root, while ProcessWire runs from an existing directory such as `public/`.
